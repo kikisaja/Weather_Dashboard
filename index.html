@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Weather Dashboard</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h2>Weather Dashboard</h2>
+        
+        <!-- Form Pencarian Kota -->
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Masukkan nama kota... (misal: Jakarta)" required>
+            <button id="search-btn">Cari</button>
+        </div>
+
+        <!-- Pesan Informasi (Error / Loading) -->
+        <div id="message-box" class="message-box"></div>
+
+        <!-- Info Cuaca Utama (Akan muncul setelah pencarian sukses) -->
+        <div id="weather-info" class="weather-info hidden">
+            <div class="main-display">
+                <h3 id="location-name">Nama Kota, ID</h3>
+                <h1 id="temperature">0°C</h1>
+                <p id="weather-desc">Kondisi Cuaca</p>
+            </div>
+
+            <!-- Detail Parameter Cuaca -->
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="label">Kelembapan</span>
+                    <span class="value" id="humidity">0%</span>
+                </div>
+                <div class="detail-card">
+                    <span class="label">Kecepatan Angin</span>
+                    <span class="value" id="wind-speed">0 km/h</span>
+                </div>
+            </div>
+
+            <!-- Fitur Rekomendasi Aktivitas Pintar -->
+            <div id="recommendation-box" class="recommendation-card">
+                <h4>Rekomendasi Aktivitas:</h4>
+                <p id="recommendation-text">Masukkan kota untuk melihat rekomendasi.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript eksternal di akhir body -->
+    <script src="javascript.js"></script>
+</body>
+</html>
