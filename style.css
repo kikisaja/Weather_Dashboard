@@ -1,0 +1,169 @@
+:root {
+    --bg-gradient: linear-gradient(to right, #e0eafc, #cfdef3);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-main: #2c3e50;
+    --primary: #4a90e2;
+    --border: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Kotak Pencarian */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#city-input:focus {
+    border-color: var(--primary);
+}
+
+#search-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#search-btn:hover {
+    background-color: #357abd;
+}
+
+/* Penanganan Pesan Sistem */
+.message-box {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.error-text { color: #e74c3c; font-weight: 600; }
+.loading-text { color: #7f8c8d; }
+
+/* Tampilan Informasi Cuaca */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.main-display {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#location-name {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+#temperature {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+#weather-desc {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #555;
+}
+
+/* Layout Grid Detail Parameter */
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.detail-card {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.detail-card .label {
+    display: block;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.detail-card .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Kotak Rekomendasi Pintar */
+.recommendation-card {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.recommendation-card h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.recommendation-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
